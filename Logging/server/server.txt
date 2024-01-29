@@ -1,0 +1,14 @@
+In a real-world scenario, we might have a distributed system where different components or services are running on separate machines, and you want to aggregate their log messages to a centralized logging server. The centralized server can then store or process these logs for monitoring, analysis, or troubleshooting.
+
+Let's create a more elaborate example with a simple client-server setup using SocketHandler in a distributed system. We'll simulate two services, each running on a separate machine, and sending log messages to a central server. For simplicity, we'll use threads to represent different machines.
+
+Ce
+
+
+In this example:
+
+server.py starts a centralized logging server that listens for incoming log messages on localhost:9020.
+service1.py and service2.py represent two separate services running on different machines. They send log messages to the centralized server using the SocketHandler.
+Each service logs messages at different intervals and with different log levels.
+The LogRecordStreamHandler on the server side is responsible for receiving log records from both services and writing them to the server's log.
+To run this example, we can execute python server.py in one terminal and python service1.py and python service2.py in two separate terminals. we will observe the log messages from both services being aggregated on the central server.

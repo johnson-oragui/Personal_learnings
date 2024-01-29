@@ -1,0 +1,68 @@
+The logging module in Python provides various handlers, allowing you to control where log messages are sent. Some common handlers include:
+
+StreamHandler:
+
+Outputs log messages to the console (stdout or stderr).
+python
+Copy code
+logging.StreamHandler()
+
+
+
+
+FileHandler:
+
+Writes log messages to a file.
+
+logging.FileHandler("example.log")
+
+
+
+
+RotatingFileHandler:
+
+Similar to FileHandler but rotates log files based on size or time.
+
+logging.handlers.RotatingFileHandler("example.log", maxBytes=100000, backupCount=3)
+The rotating file handler (RotatingFileHandler) ensures that log files don't grow indefinitely. When a log file reaches the specified size (maxBytes), it gets rotated, and the backup count (backupCount) determines how many rotated log files to keep.
+
+
+
+TimedRotatingFileHandler:
+
+Rotates log files based on a specified time interval.
+
+logging.handlers.TimedRotatingFileHandler("example.log", when="midnight", interval=1, backupCount=3)
+
+
+
+
+SMTPHandler:
+
+Sends log messages via email.
+
+logging.handlers.SMTPHandler(mailhost=("smtp.example.com", 587),
+                              fromaddr="sender@example.com",
+                              toaddrs=["recipient@example.com"],
+                              subject="Log message")
+
+
+SysLogHandler:
+
+Sends log messages to the system logger (syslog).
+
+logging.handlers.SysLogHandler()
+
+
+
+MemoryHandler:
+
+Buffers log records in memory and flushes them to a target handler when a specified buffer size is reached.
+
+logging.handlers.MemoryHandler(capacity=100, target=logging.StreamHandler())
+
+
+SocketHandler:
+
+Sends log messages to a remote server over a network socket.
+logging.handlers.SocketHandler("localhost", logging.handlers.DEFAULT_TCP_LOGGING_PORT)
