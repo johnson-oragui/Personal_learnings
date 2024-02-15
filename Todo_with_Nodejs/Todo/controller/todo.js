@@ -1,9 +1,10 @@
 
 
 export const GetTodo = async (req, res) => {
-  // res.render('/views/layouts/todo');
   try {
-    return res.send('first step to todo app');
+    res.locals.titleValue = 'Todo';
+    res.locals.descriptionValue = 'Home page for Todo';
+    return res.render('index');;
   } catch (error) {
     console.error('error in GetTodo method', error.message);
   }

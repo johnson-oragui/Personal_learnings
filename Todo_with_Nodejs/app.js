@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 MongoClient();
 
 // middleware for rendering html contents
-app.set('layout', './layouts/main');
+app.set('layout', path.join(__dirname, '/views/layouts/main'));
 
 // middleware for template engine to be used
 app.set('view engine', 'ejs');
