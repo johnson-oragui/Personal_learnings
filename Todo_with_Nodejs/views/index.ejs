@@ -4,9 +4,20 @@
         <h1>
             TODO Lists
         </h1>
+        <a href="/add">Add Todo</a>
         <ul>
-            <li>Task 1</li>
-            <li>Task 2</li>
+            <% if (todos && todos.length > 0) { %>
+                <% todos.forEach(todo => { %>
+                    <li>
+                        <%= todo.title %> <br>
+                        <%= todo.content %>
+                        <a href="/delete<%= todo._id %>"><button>Delete</button></a>
+                    </li>
+                   
+                <% }) %>
+            <% } else { %>
+              <li>No Todos found</li>
+            <% } %>
         </ul>
     </div>
 </body>
