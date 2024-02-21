@@ -13,7 +13,7 @@ router.get('/logout', Logout.get);
 router.get('/securedroute', SecuredRoute.get);
 router.get('/signup', SignUp.get);
 
-router.get('/signup', SignUp.post);
+router.post('/signup', SignUp.post);
 router.post('/login', Login.post);
 router.post('/logout', Logout.post);
 
