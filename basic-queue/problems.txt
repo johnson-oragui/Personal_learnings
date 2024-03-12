@@ -1,0 +1,52 @@
+task 1.
+
+
+Sure! Let's consider a simple problem involving a queue:
+
+Problem:
+You are given a stream of integers and a window size. Write a function to calculate the moving average of all integers in the stream. The moving average is the average of the last window size numbers.
+
+Example:
+
+javascript
+Copy code
+const stream = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const windowSize = 3;
+
+movingAverage(stream, windowSize); // Output: [1, 1.5, 2, 3, 4, 5, 6, 7, 8, 9]
+Explanation:
+
+For the first window of size 3, the moving average is (1 + 2 + 3) / 3 = 2.
+For the second window, it's (2 + 3 + 4) / 3 = 3.
+And so on.
+Task:
+Write a function movingAverage(stream, windowSize) that takes in a stream of integers (stream) and a window size (windowSize), and returns an array containing the moving averages for each position in the stream.
+
+task 2.
+
+Problem:
+
+You are given an array of tasks represented by integers, where each integer represents the time required to complete the task. You have a single worker who can execute one task at a time. However, the worker can take a break after completing each task. The break time after completing a task is represented by an integer breakTime. During the break, the worker can choose to either rest or work on another task (if available). Write a function to calculate the total time required for the worker to complete all tasks considering the break time.
+
+Example:
+
+javascript
+Copy code
+const tasks = [3, 2, 5, 4];
+const breakTime = 2;
+
+totalTime(tasks, breakTime); // Output: 18
+Explanation:
+
+The worker completes the first task (3 units of time).
+After completing the first task, the worker takes a break (2 units of time).
+The worker completes the second task (2 units of time).
+After completing the second task, the worker takes a break (2 units of time).
+The worker completes the third task (5 units of time).
+After completing the third task, the worker takes a break (2 units of time).
+The worker completes the fourth task (4 units of time).
+The total time required is 3 + 2 + 2 + 5 + 2 + 4 = 18 units of time.
+
+Task:
+
+Write a function totalTime(tasks, breakTime) that takes in an array of tasks (tasks) and the break time (breakTime) and returns the total time required for the worker to complete all tasks considering the break time.
