@@ -1,0 +1,41 @@
+Authentication Endpoints:
+
+/api/todo/register - Register a new user.
+/api/todo/login - Login existing user.
+/api/todo/logout - Logout user.
+Todo List Endpoints:
+
+/api/todo - GET: Get all todos for the authenticated user.
+/api/todo/:id - GET: Get a specific todo by ID.
+/api/todo - POST: Create a new todo.
+/api/todo/:id - PUT: Update an existing todo by ID.
+/api/todo/:id - DELETE: Delete a todo by ID.
+User Profile Endpoints:
+
+/api/todo/profile - GET: Get the profile details of the authenticated user.
+/api/todo/profile - PUT: Update the profile details of the authenticated user.
+/api/todo/profile/password - PUT: Update the password of the authenticated user.
+/api/todo/profile/avatar - PUT: Update the avatar of the authenticated user.
+Shared Todo Lists Endpoints:
+
+/api/todo/shared - GET: Get all shared todos for the authenticated user.
+/api/todo/shared/:id - GET: Get a specific shared todo by ID.
+/api/todo/shared - POST: Share a todo with another user.
+/api/todo/shared/:id - PUT: Update a shared todo by ID.
+/api/todo/shared/:id - DELETE: Remove sharing of a todo by ID.
+Collaboration Endpoints:
+
+/api/collaboration/invite - POST: Invite a user to collaborate on a todo list.
+/api/collaboration/accept/:token - POST: Accept invitation to collaborate on a todo list.
+Error Handling:
+
+Handle errors gracefully and provide meaningful error messages and appropriate HTTP status codes.
+Security Considerations:
+
+Implement authentication using JWT tokens.
+Ensure that only authorized users can access and manipulate their own todos.
+Implement authorization to ensure users can only access their own resources.
+Validation:
+
+Validate input data to endpoints to prevent malicious or erroneous requests.
+Ensure data integrity by validating request bodies and parameters.
