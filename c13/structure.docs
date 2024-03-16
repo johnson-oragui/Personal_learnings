@@ -2,14 +2,14 @@ Authentication Endpoints:
 
 /api/todo/register - Register a new user.
 /api/todo/login - Login existing user.
-/api/todo/logout - Logout user.
+/api/todo/userId/logout - Logout user.
 Todo List Endpoints:
 
-/api/todo - GET: Get all todos for the authenticated user.
-/api/todo/:id - GET: Get a specific todo by ID.
-/api/todo - POST: Create a new todo.
-/api/todo/:id - PUT: Update an existing todo by ID.
-/api/todo/:id - DELETE: Delete a todo by ID.
+/api/todo/userId - GET: Get all todos for the authenticated user.
+/api/todo/userId/todo/todoId - GET: Get a specific todo by ID.
+/api/todo/userId - POST: Create a new todo.
+/api/todo/userId/todo/todoId - PUT: Update an existing todo by ID.
+/api/todo/userId/todo/todoId - DELETE: Delete a todo by ID.
 User Profile Endpoints:
 
 /api/todo/profile - GET: Get the profile details of the authenticated user.
