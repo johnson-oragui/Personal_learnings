@@ -1,0 +1,18 @@
+[2024-03-15 19:18:09] [DEBUG]: Incoming request: POST /api/todo/login {"content-length":"375","accept-encoding":"gzip, deflate, br","accept":"*/*","user-agent":"Thunder Client (https://www.thunderclient.com)","content-type":"application/json","host":"localhost:5000","connection":"close"} /api/todo/login ::ffff:127.0.0.1
+[2024-03-15 19:18:09] [DEBUG]: Response sent: 200 undefined
+[2024-03-15 19:18:19] [DEBUG]: Incoming request: POST /api/todo/login {"content-length":"46","accept-encoding":"gzip, deflate, br","accept":"*/*","user-agent":"Thunder Client (https://www.thunderclient.com)","content-type":"application/json","host":"localhost:5000","connection":"close"} /api/todo/login ::ffff:127.0.0.1
+[2024-03-15 19:18:19] [DEBUG]: Response sent: 200 undefined
+[2024-03-15 19:18:22] [DEBUG]: Incoming request: POST /api/todo/login {"content-length":"46","accept-encoding":"gzip, deflate, br","accept":"*/*","user-agent":"Thunder Client (https://www.thunderclient.com)","content-type":"application/json","host":"localhost:5000","connection":"close"} /api/todo/login ::ffff:127.0.0.1
+[2024-03-15 19:18:22] [DEBUG]: Response sent: 200 undefined
+[2024-03-15 19:18:23] [DEBUG]: Incoming request: POST /api/todo/login {"content-length":"46","accept-encoding":"gzip, deflate, br","accept":"*/*","user-agent":"Thunder Client (https://www.thunderclient.com)","content-type":"application/json","host":"localhost:5000","connection":"close"} /api/todo/login ::ffff:127.0.0.1
+[2024-03-15 19:18:23] [DEBUG]: Response sent: 200 undefined
+[2024-03-15 19:18:24] [DEBUG]: Incoming request: POST /api/todo/login {"content-length":"46","accept-encoding":"gzip, deflate, br","accept":"*/*","user-agent":"Thunder Client (https://www.thunderclient.com)","content-type":"application/json","host":"localhost:5000","connection":"close"} /api/todo/login ::ffff:127.0.0.1
+[2024-03-15 19:18:24] [DEBUG]: Response sent: 200 undefined
+[2024-03-15 19:18:24] [DEBUG]: Incoming request: POST /api/todo/login {"content-length":"46","accept-encoding":"gzip, deflate, br","accept":"*/*","user-agent":"Thunder Client (https://www.thunderclient.com)","content-type":"application/json","host":"localhost:5000","connection":"close"} /api/todo/login ::ffff:127.0.0.1
+[2024-03-15 19:18:24] [DEBUG]: Response sent: 200 undefined
+[2024-03-15 19:18:57] [DEBUG]: Incoming request: POST /api/todo/login {"content-length":"46","accept-encoding":"gzip, deflate, br","accept":"*/*","user-agent":"Thunder Client (https://www.thunderclient.com)","content-type":"application/json","host":"localhost:5000","connection":"close"} /api/todo/login ::ffff:127.0.0.1
+[2024-03-15 19:18:57] [DEBUG]: Response sent: 200 undefined
+[2024-03-15 19:36:00] [DEBUG]: Removed 0 expired access tokens for user 65f3324ff91179017745892e
+[2024-03-15 19:36:00] [DEBUG]: Removed 0 expired access tokens for user 65f3324ff91179017745892e
+[2024-03-15 19:39:01] [DEBUG]: Removed 0 expired Access Token(s) for user 65f3324ff91179017745892e
+[2024-03-15 19:39:01] [DEBUG]: Removed 0 expired Refresh Token(s) for user 65f3324ff91179017745892e
