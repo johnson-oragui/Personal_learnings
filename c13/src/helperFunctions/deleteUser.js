@@ -1,7 +1,24 @@
 const User = require('../models/userModel');
 const checkSiteAdminRole = require('./checkSiteAdminRole');
 
-const deleteUser = async (userId) => {
+const deleteUser = async (userId = '', userData = {}) => {
+  if (userData) {
+    try {
+      // returns true if userId is siteAdmin
+      const siteAdminExists = await checkSiteAdminRole(userId);
+      if (siteAdminExists) {
+        throw new Error('Cannot delete site admin');
+      }
+      const deletedUser = await User.findOneAndDelete({ email: userData.email, username: userData.username });
+      if (!deletedUser) {
+        return 'User not found';
+      }
+      return 'User deleted successfully';
+    } catch (error) {
+      console.error('Failed to delete user', error.message);
+      throw new Error('Failed to delete user');
+    }
+  }
   try {
     // returns true if userId is siteAdmin
     const siteAdminExists = await checkSiteAdminRole(userId);
