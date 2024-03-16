@@ -230,12 +230,12 @@ class AuthController {
 
     if (!token) {
       console.error('token missing');
-      return res.status(400).json({ error: 'token missing, already logged out' });
+      return res.status(400).json({ error: 'token missing' });
     }
     const { refreshToken } = req.body;
     if (!refreshToken) {
       console.error('refreshToken missing');
-      return res.status(400).json({ error: 'refreshToken missing, already logged out' });
+      return res.status(400).json({ error: 'refreshToken missing' });
     }
 
     const { userId } = req.params;
@@ -254,7 +254,7 @@ class AuthController {
     // delete cookie
     // await deleteCookie(res);
 
-    return res.status(200).json({ message: 'logout' });
+    return res.status(200).json({ message: 'logout successful' });
   }
 }
 
