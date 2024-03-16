@@ -4,6 +4,10 @@ const { Schema } = mongoose;
 
 // Define the user schema
 const todoSchema = new Schema({
+  userId: {
+    type: Schema.Types.ObjectId,
+    required: [true, 'Must include userId'],
+  },
   title: {
     type: String,
     required: [true, 'Must include title'],
@@ -19,10 +23,6 @@ const todoSchema = new Schema({
   createdAt: {
     type: Date,
     default: new Date(),
-  },
-  userId: {
-    type: Schema.Types.ObjectId,
-    required: [true, 'Must include userId'],
   },
 });
 
