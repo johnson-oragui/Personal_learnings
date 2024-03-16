@@ -1,5 +1,7 @@
 const findUser = require('../helperFunctions/findUser');
 const deleteUser = require('../helperFunctions/deleteUser');
+const usernameConstraints = require('../helperFunctions/usernameConstraints');
+const validateEmail = require('../helperFunctions/validateEmail');
 
 class UserController {
   static async deleteUser(req, res) {
@@ -12,6 +14,14 @@ class UserController {
       const { username, email } = req.body;
       // check if fields are not empty
       if (username && username.trim() !== '' && email && email.trim() !== '') {
+        // validate username, returns true if valid
+        const usernameValid = usernameConstraints(username);
+        // validate email, returns true if valid
+        const emailValid = validateEmail(email);
+        if (!usernameValid || !emailValid) {
+          console.log('username or email invalid: ', username, email);
+          return res.status(400).json({ error: 'Invalid username or email' });
+        }
         // go ahead to delete user from database
         try {
           // check if user can be delted
