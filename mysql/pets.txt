@@ -1,0 +1,7 @@
+cat
+mouse
+parrot
+kite
+eagle
+bear
+worm
