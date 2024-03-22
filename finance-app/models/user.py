@@ -1,6 +1,5 @@
 from bson import ObjectId
 import bcrypt
-from app import mongo
 
 class User:
     def __init__(self, first_name, last_name, email, phone_number, username, password, account_type):
