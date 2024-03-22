@@ -22,6 +22,15 @@
     <p>Register with us.</p>
 </div>
     <h2>Registration Form</h2>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <ul class="flashes">
+            {% for category, message in messages %}
+                <li class="flash {{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
     <form action="/register" method="post">
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name" required {% if inputs %}
@@ -49,12 +58,13 @@
         {% endif %}><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required {% if inputs %}
-        value="{{ inputs.get('password') }}"
-        {% endif %}><br>
+        <input type="password" id="password" name="password" required><br>
 
-        <label for="accountType">Account Type:</label>
-        <select id="accountType" name="accountType" required>
+        <label for="password2">Confirm Password:</label>
+        <input type="password2" id="password2" name="password2" required><br>
+
+        <label for="account_type">Account Type:</label>
+        <select id="account_type" name="account_type" required>
             <option value="standard">Standard</option>
             <option value="premium">Premium</option>
             <option value="business">Business</option>
