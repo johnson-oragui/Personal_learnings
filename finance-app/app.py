@@ -1,5 +1,6 @@
 from os import getenv
 import dotenv
+from datetime import timedelta
 from flask import Flask, render_template
 from flask_pymongo import PyMongo
 from flask_jwt_extended import JWTManager
@@ -10,12 +11,18 @@ app = Flask(__name__, template_folder='templates')
 
 app.config['SECRET_KEY'] = getenv('SECRET_KEY')
 # Setup the Flask-JWT-Extended extension
+app.config["JWT_COOKIE_SECURE"] = False
+app.config["JWT_TOKEN_LOCATION"] = ["cookies"]
 app.config["JWT_SECRET_KEY"] = getenv("JWT_SECRET_KEY")
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(minutes=10)
+
+app.config['STRICT_SLASHES'] = False
 jwt = JWTManager(app)
 
 app.config["MONGO_URI"] = "mongodb://localhost:27017/test"
 
-mongo = PyMongo(app)
+client = PyMongo(app)
+
 
 try:
     # Register blueprints (once)
@@ -26,7 +33,6 @@ try:
 except AssertionError as e:
     print("Error registering blueprints:", e)
 
-app.url_map.strict_slashes = False
 
 @app.route('/')
 def home():
@@ -34,7 +40,6 @@ def home():
     Home page
     """
     return render_template('home.html')
-
 
 @app.route('/about')
 def about():
