@@ -11,8 +11,9 @@ class Account:
       self.limit = 10000
       self.last_updated = datetime.now()
 
-    def to_dict(self):
+    def to_dict(self) -> dict:
       """
+      Converts to dict representation
       """
       return {
         "user_id": self.user_id,
